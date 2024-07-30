@@ -1,0 +1,31 @@
+@import "../../assets/styles/variables.css";
+@import "../../assets/styles/buttons.css";
+@import "../../assets/styles/nullification.css";
+
+.word-carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow {
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.arrow:hover {
+    transform: scale(1.2);
+}
+
+.word-card {
+    margin: 0 20px;
+    transition: opacity 0.5s;
+    opacity: 0;
+}
+
+.word-card.show {
+    opacity: 1;
+}

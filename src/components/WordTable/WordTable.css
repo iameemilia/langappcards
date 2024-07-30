@@ -1,0 +1,56 @@
+@import "../../assets/styles/variables.css";
+@import "../../assets/styles/buttons.css";
+@import "../../assets/styles/nullification.css";
+
+.word-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.word-table th,
+.word-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.word-table input {
+    width: 100%;
+    padding: 4px;
+}
+
+.word-table button {
+    padding: 4px 8px;
+    cursor: pointer;
+}
+
+.editable-input {
+    width: 90%;
+    /* Поля ввода занимают 90% ширины ячейки */
+    box-sizing: border-box;
+    /* Учитывать отступы и границы в ширине */
+    border: 1px solid #ffc2c451;
+    /* Начальная граница */
+    border-radius: 4px;
+    /* Скругление углов */
+    padding: 5px;
+    /* Отступы внутри поля ввода */
+}
+
+.editable-input:focus {
+    border-color: #ffa8a8;
+    /* Цвет границы при фокусе */
+    outline: none;
+    /* Убираем стандартный контур */
+}
+
+th {
+    width: 25%;
+    /* Устанавливаем ширину каждой ячейки заголовка на 25% */
+    text-align: center;
+    /* Выравнивание текста по центру */
+}
+
+td {
+    text-align: center;
+    /* Выравнивание текста по центру для ячеек */
+}

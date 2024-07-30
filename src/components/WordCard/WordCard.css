@@ -1,0 +1,56 @@
+@import "../../assets/styles/variables.css";
+@import "../../assets/styles/buttons.css";
+@import "../../assets/styles/nullification.css";
+
+.word-card {
+    width: 200px;
+    height: 150px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.word-card__front {
+    padding: 10px;
+    background-color: #ffc0cb;
+}
+
+.word-card__english {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.word-card__transcription {
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+}
+
+.word-card__button {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.word-card__back {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    padding: 10px;
+}
+
+.word-card__russian {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.is-visible {
+    display: block;
+}

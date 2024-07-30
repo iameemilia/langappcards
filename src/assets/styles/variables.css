@@ -1,0 +1,12 @@
+:root {
+    --primary-color: #ff80848b;
+    --button-color: #ff0037ac;
+    --button-color-2: #ffa4a4;
+    --text: #000000;
+    --font-family: "Arial", sans-serif;
+    --font-size: 16px;
+    --border-radius: 5px;
+    --transition-time: 0.3s;
+    --input-padding: 5px;
+    --input-border: 1px solid #ddd;
+}

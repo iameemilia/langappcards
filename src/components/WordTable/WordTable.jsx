@@ -84,13 +84,13 @@ const WordTable = () => {
                         <td>
                             {editIndex === index ? (
                                 <>
-                                    <button onClick={handleSave}>Сохранить</button>
-                                    <button onClick={handleCancel}>Отмена</button>
+                                    <button onClick={handleSave}>✓</button> {/* Галочка для сохранить */}
+                                    <button onClick={handleCancel}>✖</button> {/* Крестик для отмены */}
                                 </>
                             ) : (
                                 <>
-                                    <button onClick={() => handleEdit(index)}>Редактировать</button>
-                                    <button onClick={() => setWords(words.filter((_, i) => i !== index))}>Удалить</button>
+                                    <button onClick={() => handleEdit(index)}>✏</button> {/* Карандаш для редактирования */}
+                                    <button onClick={() => setWords(words.filter((_, i) => i !== index))}>✖</button> {/* Крестик для удаления */}
                                 </>
                             )}
                         </td>
@@ -111,4 +111,4 @@ const styles = {
     },
 };
 
-export default WordTable;  
+export default WordTable;

@@ -9,13 +9,15 @@ const WordCard = ({ word }) => {
     };
 
     return (
-        <div style={styles.card}>
-            <h2 style={styles.english}>{word.english}</h2>
-            <p style={styles.transcription}>{word.transcription}</p>
-            {showTranslation && <p style={styles.translation}>{word.russian}</p>}
-            <button onClick={toggleTranslation}>
-                {showTranslation ? "Скрыть перевод" : "Показать перевод"}
-            </button>
+        <div style={{ marginTop: '100px' }}>
+            <div style={styles.card}>
+                <h2 style={styles.english}>{word.english}</h2>
+                <p style={styles.transcription}>{word.transcription}</p>
+                {showTranslation && <p style={styles.translation}>{word.russian}</p>}
+                <button onClick={toggleTranslation}>
+                    {showTranslation ? "Скрыть перевод" : "Показать перевод"}
+                </button>
+            </div>
         </div>
     );
 };
@@ -37,10 +39,6 @@ const styles = {
         flexDirection: 'column',
         justifyContent: 'space-between',
         alignItems: 'center',
-        position: 'absolute',
-        top: '50%',
-        left: '50%',
-        transform: 'translate(-50%, -50%)',
     },
     english: {
         color: '#333',

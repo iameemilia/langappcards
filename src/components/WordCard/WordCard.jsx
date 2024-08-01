@@ -1,13 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import "./WordCard.css";
 
-const WordCard = ({ word }) => {
-    const [showTranslation, setShowTranslation] = useState(false);
-
-    const toggleTranslation = () => {
-        setShowTranslation((prev) => !prev);
-    };
-
+const WordCard = ({ word, showTranslation, toggleTranslation }) => {
     return (
         <div style={{ marginTop: '100px' }}>
             <div style={styles.card}>
@@ -55,7 +49,6 @@ const styles = {
         fontSize: '24px',
         margin: '5px 0',
     }
-
 };
 
 export default WordCard;

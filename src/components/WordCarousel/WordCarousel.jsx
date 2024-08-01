@@ -2,16 +2,28 @@ import React, { useState } from 'react';
 import WordCard from '../WordCard/WordCard';
 import "./WordCarousel.css";
 
-
 const WordCarousel = ({ words }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [showTranslation, setShowTranslation] = useState(false);
 
     const handleNext = () => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % words.length);
+        setCurrentIndex((prevIndex) => {
+            const newIndex = (prevIndex + 1) % words.length;
+            setShowTranslation(false); // Скрыть перевод при смене карточки
+            return newIndex;
+        });
     };
 
     const handlePrev = () => {
-        setCurrentIndex((prevIndex) => (prevIndex - 1 + words.length) % words.length);
+        setCurrentIndex((prevIndex) => {
+            const newIndex = (prevIndex - 1 + words.length) % words.length;
+            setShowTranslation(false); // Скрыть перевод при смене карточки
+            return newIndex;
+        });
+    };
+
+    const toggleTranslation = () => {
+        setShowTranslation((prev) => !prev);
     };
 
     if (!words.length) {
@@ -21,7 +33,11 @@ const WordCarousel = ({ words }) => {
     return (
         <div style={styles.carousel}>
             <button onClick={handlePrev} style={styles.button}>&lt;</button> {/* Стрелка влево */}
-            <WordCard word={words[currentIndex]} />
+            <WordCard 
+                word={words[currentIndex]} 
+                showTranslation={showTranslation} 
+                toggleTranslation={toggleTranslation} 
+            />
             <button onClick={handleNext} style={styles.button}>&gt;</button> {/* Стрелка вправо */}
         </div>
     );
